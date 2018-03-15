@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PolygonKernelSearching", "PolygonKernelSearching\PolygonKernelSearching.pyproj", "{307AE3F8-0861-4F12-A42E-E4D48ED5A37C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{307AE3F8-0861-4F12-A42E-E4D48ED5A37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{307AE3F8-0861-4F12-A42E-E4D48ED5A37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF1AC7B2-D94F-47A8-8372-2F7DAC7EB480}
+	EndGlobalSection
+EndGlobal
