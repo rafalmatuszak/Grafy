@@ -75,9 +75,8 @@ max_num = max(maximas,key=attrgetter('y'))
 if(len(minimas) == 0 | len(maximas) == 0 | min_num.y < max_num.y):
     print("There is no {O}-Kernel, because local minimum is lower placed than local maximum");
 else:
-	print("Kernel of given polygon is located between below shown points: ")
+	#print("Kernel of given polygon is located between below shown points: ")
     print("Minimum:")
     print(min_num.x,min_num.y)
     print("Maximas:")
     print(max_num.x,max_num.y)
- 
