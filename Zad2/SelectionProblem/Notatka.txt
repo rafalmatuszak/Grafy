@@ -1,0 +1,6 @@
+Podczas sprawdzania programu w trakcie zajêæ 22.03.2018, zasz³a w¹tpliwoœæ, czy zaproponowany kod wybiera mediany, czy mediany dolne.
+Po ponownym sprawdzeniu programu, stwierdzono, ¿e w jêzyku Python numerowanie tablic nastêpuje od zera, a zatem, jesli dany jest podzbior 
+np. [1621,14267,42528,58062,83328] i przechodzi on ponownie (rekurencyjnie) do wyboru mediany z tego podzbioru, 
+poprzez selection(subset, len(subset) // 2)), to wybiera on element o indeksie 2 - czyli trzeci element piêcioelementowego zbioru.
+
+Zatem powy¿szy kod spe³nia liniow¹ z³o¿onoœæ algorytmu selekcji.
