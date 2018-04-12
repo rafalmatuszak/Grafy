@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>7f387dba-6fdc-43f1-86fc-8a8548c9facb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>class3.py</StartupFile>
+    <StartupFile>KDTree.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,13 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="class1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="class2.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="class3.py">
+    <Compile Include="KDTree.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

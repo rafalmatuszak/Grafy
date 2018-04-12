@@ -12,7 +12,7 @@ class Point(object):
         self.x, self.y = x, y
 
     def __str__(self):
-        return "(%s, %s)" % (self.x, self.y)
+        return "P"
 
     def __repr__(self):
         return "Point(%s, %s)" % (self.x, self.y)
@@ -34,19 +34,41 @@ class Node(object):
 #traverse tree printing
 def traverse(rootnode):
   thislevel = [rootnode]
-  a = '                                                                                                                                   '
+  depth, p = 0, 0
+  a = ' '*100
   while thislevel:
     nextlevel = []
     a = a[:len(a) // 2]
     for n in thislevel:
-      if Point:
-        print(a + str(n.id), end='')
+      if isinstance(n.id,Point):
+        print(a + str(n.id) + str(p),end ='')
+        p += 1
       else:
-        print(a + str(n.id) + a, end = '')
+        print(a + 'l' + str(depth) + a,end='')
+        depth += 1
+
       if n.left: nextlevel.append(n.left)
       if n.right: nextlevel.append(n.right)
       thislevel = nextlevel
     print("\n")
+
+#def traverse2(rootnode):
+#    this = [rootnode]
+#    global depth
+#    p = 0
+#    a =  ' '*100
+#    while this:
+#        nextlevel = []
+#        for n in this:
+#            if isinstance(n.id,Point):
+#                print("\t" + '-' + str(n.id) + str(p))
+#            else:
+#                print("\t" + '+' + 'l' + str(depth))        
+#                depth += 1
+#            if n.left: nextlevel.append(n.left)
+#            if n.right: nextlevel.append(n.right)
+#            this = nextlevel
+#        print("\n")
 
 #Calculating median    
 def mediann(P):
@@ -129,4 +151,4 @@ plt.scatter(x,y)
 
 root = buildKDTree(points,0)
 traverse(root)
-traverse2(root)
+#traverse2(root)
