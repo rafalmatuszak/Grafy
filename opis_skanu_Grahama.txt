@@ -1,0 +1,14 @@
+Skan Grahama:
+1. Wyznacza punkt o najmniejszej skladowej y
+NASTÊPNIE
+(sortowanie k¹towe, unikaæ wyznaczania k¹tów),
+nie potrzeba liczyc katow, a porownanie ich "wielkoœci", na podstawie samych wspolrzednych,
+jesli sa dwa (n-punktow) ktore maja taka sama "wielkosc" kata, usuwamy te o mniejszej igrekowej,
+
+gdy sa dwa punkty a(x1,y1) i b(x2,y2)
+bierzemy odleglosci wzgledne po x i y od punktu starowego, porownujemy stosunek pitagorejski jednego i drugiego, 
+pozbywamy sie dzielenia i porownujemy
+
+dokladamy najwyzej punkty do stosu, zwracajac uwage na kat skretu. jesli nastepny punkt skreca z katem ponizej 180, 
+odrzucamy poprzednik i skanujemy dalej
+

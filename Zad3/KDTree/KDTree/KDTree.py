@@ -52,28 +52,31 @@ def traverse(rootnode):
       thislevel = nextlevel
     print("\n")
 
-#def traverse2(rootnode):
-#    this = [rootnode]
-#    global depth
-#    p = 0
-#    a =  ' '*100
-#    while this:
-#        nextlevel = []
-#        for n in this:
-#            if isinstance(n.id,Point):
-#                print("\t" + '-' + str(n.id) + str(p))
-#            else:
-#                print("\t" + '+' + 'l' + str(depth))        
-#                depth += 1
-#            if n.left: nextlevel.append(n.left)
-#            if n.right: nextlevel.append(n.right)
-#            this = nextlevel
-#        print("\n")
+def traverse2(rootnode):
+  thislevel = [rootnode]
+  depth, p = 0, 0
+  a = ' '*100
+  label = ''
+  while thislevel:
+    nextlevel = []
+    a = a[:len(a) // 2]
+    for n in thislevel:
+      if isinstance(n.id,Point):
+        label = a + str(n.id) + str(p)
+        p += 1
+      else:
+        label = a + 'l' + str(depth)
+        depth += 1 
+
+      print(label,end ='')
+      if n.left: nextlevel.append(n.left)
+      if n.right: nextlevel.append(n.right)
+      thislevel = nextlevel
+    print("\n")
 
 #Calculating median    
-def mediann(P):
+def median(P):
         length = len(P)
-        eve = length // 2
         if length % 2 == 0:
             return Point(P[(length // 2) - 1].x,P[(length // 2) - 1].y)
         else:
@@ -97,15 +100,15 @@ def buildKDTree(points,depth = 0,label='l'):
         return
 
     if depth % 2 == 0:
-        points.sort(key=attrgetter('x'))
-        med = mediann(points)
+        #points.sort(key=attrgetter('x'))
+        med = median(points)
         print("Dividing by x axis with median: ",med.x,med.y)
         for it in points:
             p_right.append(it) if compare(it,med,'x') == True else p_left.append(it)
 
     else:
-        points.sort(key=attrgetter('y'))
-        med = mediann(points)
+        #points.sort(key=attrgetter('y'))
+        med = median(points)
         print("Dividing by y axis with median: ",med.x,med.y)
         for it in points:
             p_right.append(it) if compare(it,med,'y') == True else p_left.append(it)
@@ -132,7 +135,7 @@ def buildKDTree(points,depth = 0,label='l'):
 
 #loading points from CSV file    
 points = []
-with open('points.csv','r') as csvfile:
+with open('points2.csv','r') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         points.append(Point(int(row['x']),int(row['y'])))
@@ -147,8 +150,8 @@ for p in points:
 plt.axis([0,40,0,40])
 plt.grid()
 plt.scatter(x,y)
-#plt.show()
+plt.show()
 
+print("Dataset count: ",len(points))
 root = buildKDTree(points,0)
 traverse(root)
-#traverse2(root)

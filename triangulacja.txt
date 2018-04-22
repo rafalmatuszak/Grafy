@@ -1,0 +1,2 @@
+Triangulacja wielokata œciœle x-monotonicznego (mozna tez zalozyc, ze brak pokrywajacych sie odcietych)
+Mozna przyjac jakis punkty startowy
