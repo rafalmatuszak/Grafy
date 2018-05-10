@@ -38,15 +38,16 @@ def cost(a,b):
    
 
 
-#points = [Point(0,0),Point(4,7),Point(7,7),Point(3,4),Point(5,4),Point(7,4),Point(5,2),Point(9,2)]
-#points = [Point(0,0),Point(0, 2),Point(2, 6),Point(3, 2),Point(3, 5),Point(3, 7),Point(5, 2),Point(5, 4),Point(7, 6),Point(8, 2),Point(8, 3),Point(8, 5),Point(10, 1),Point(12, 3)]
-points = [Point(0,0), Point(0,8), Point(1,7), Point(2,6), Point(3,5),Point(4,4),Point(5,3),Point(6,2), Point(7,1)]
+#points = [Point(4,7),Point(7,7),Point(3,4),Point(5,4),Point(7,4),Point(5,2),Point(9,2)]
+points = [Point(0,8), Point(1,7), Point(2,6), Point(3,5),Point(4,4),Point(5,3),Point(6,2), Point(7,1)]
+#points = [Point(1,2), Point(2,2),Point(3,2),Point(4,2)]
 points2 = list(points) 
 
 #porzadek poczatkowy
 points.sort(key=attrgetter('y'),reverse=True)
 points.sort(key=attrgetter('met'),reverse=True)    
 
+#algorytm RSA
 def ApproxRSA(points):
     merges = []
     while (len(points) > 1):
@@ -72,8 +73,9 @@ def drawRSA(points,merges):
     for m in merges:
         plt.plot((m.Merge.x,m.P.x),(m.Merge.y,m.P.y),'r')
         plt.plot((m.Merge.x,m.Q.x),(m.Merge.y,m.Q.y),'r')
-    #plt.plot((0,merge_points[-1].Merge.x),(0,merge_points[-1].Merge.y),'r')
-    #plt.plot((merge_points[-1].Merge.x,0),(merge_points[-1].Merge.y,0),'r')
+    
+    plt.plot((merge_points[-1].Merge.x,merge_points[-1].Merge.x),(merge_points[-1].Merge.y,0),'r')
+    plt.plot((merge_points[-1].Merge.x,0),(0,0),'r')
     plt.grid()
     plt.show() 
          
