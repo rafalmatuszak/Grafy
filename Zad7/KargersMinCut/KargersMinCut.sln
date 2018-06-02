@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "KargersMinCut", "KargersMinCut\KargersMinCut.pyproj", "{04DD773E-ABF6-4338-BD81-C7EFCB995C63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04DD773E-ABF6-4338-BD81-C7EFCB995C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04DD773E-ABF6-4338-BD81-C7EFCB995C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F05BF37-7120-4E3D-9F0B-4056FFEF0709}
+	EndGlobalSection
+EndGlobal
