@@ -27,6 +27,7 @@
     <Content Include="source.txt" />
     <Content Include="source2.txt" />
     <Content Include="source3.txt" />
+    <Content Include="source4.txt" />
     <Content Include="withoutClasses.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
